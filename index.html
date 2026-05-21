@@ -1215,40 +1215,34 @@ function closePreventivoModal() {
 }
 
 document.getElementById('openPreventivoModal').addEventListener('click', openPreventivoModal);
+
+// ---- Validazione condivisa form preventivo ----
+function handlePreventivoSubmit(prefix, formEl, successEl) {
+  const fields = ['nome', 'cognome', 'telefono', 'email', 'tipo'];
+  const allFilled = fields.every(f => document.getElementById(prefix + f).value.trim() !== '');
+  if (!allFilled) {
+    alert('Per favore compila tutti i campi obbligatori.');
+    return;
+  }
+  formEl.style.display = 'none';
+  successEl.style.display = 'block';
+}
+
 // ---- Form preventivo inline ----
 const inlineForm = document.getElementById('inlinePreventivoForm');
 const inlineSuccess = document.getElementById('inline-prev-success');
 inlineForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const nome = document.getElementById('ip-nome').value.trim();
-  const cognome = document.getElementById('ip-cognome').value.trim();
-  const telefono = document.getElementById('ip-telefono').value.trim();
-  const email = document.getElementById('ip-email').value.trim();
-  const tipo = document.getElementById('ip-tipo').value;
-  if (!nome || !cognome || !telefono || !email || !tipo) {
-    alert('Per favore compila tutti i campi obbligatori.');
-    return;
-  }
-  inlineForm.style.display = 'none';
-  inlineSuccess.style.display = 'block';
+  handlePreventivoSubmit('ip-', inlineForm, inlineSuccess);
 });
+
 document.getElementById('closePreventivoModal').addEventListener('click', closePreventivoModal);
 prevOverlay.addEventListener('click', (e) => { if (e.target === prevOverlay) closePreventivoModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && prevOverlay.classList.contains('open')) closePreventivoModal(); });
 
 prevForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const nome = document.getElementById('prev-nome').value.trim();
-  const cognome = document.getElementById('prev-cognome').value.trim();
-  const telefono = document.getElementById('prev-telefono').value.trim();
-  const email = document.getElementById('prev-email').value.trim();
-  const tipo = document.getElementById('prev-tipo').value;
-  if (!nome || !cognome || !telefono || !email || !tipo) {
-    alert('Per favore compila tutti i campi obbligatori.');
-    return;
-  }
-  prevForm.style.display = 'none';
-  prevSuccess.style.display = 'block';
+  handlePreventivoSubmit('prev-', prevForm, prevSuccess);
 });
 
 // ---- Mobile menu toggle ----
