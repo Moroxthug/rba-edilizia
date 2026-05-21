@@ -24,56 +24,55 @@ h1,h2,h3,h4,h5,h6 {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
-/* ===== LAYOUT: vertical sidebar header + main content ===== */
-#outer-wrap { display: flex; min-height: 100vh; }
+/* ===== LAYOUT ===== */
+#outer-wrap { display: block; min-height: 100vh; }
 
-/* ===== VERTICAL LEFT HEADER ===== */
+/* ===== TOP HORIZONTAL HEADER ===== */
 #site-header {
   position: fixed;
-  top: 0; left: 0; bottom: 0;
-  width: 260px;
+  top: 0; left: 0; right: 0;
+  height: 80px;
   background: #fff;
   z-index: 1000;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 30px 0 20px;
-  box-shadow: 2px 0 15px rgba(0,0,0,0.1);
-  overflow-y: auto;
-  transition: transform 0.3s ease;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: none;
 }
 
 #site-logo {
-  margin-bottom: 30px;
-  text-align: center;
-  padding: 0 20px;
+  flex-shrink: 0;
 }
 #site-logo img {
-  max-width: 180px;
-  margin: 0 auto;
+  height: 62px;
+  width: auto;
+  display: block;
 }
 
-#site-navigation { width: 100%; }
+#site-navigation { width: auto; }
 #site-navigation ul {
   list-style: none;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 #site-navigation ul li a {
   display: block;
-  padding: 14px 30px;
+  padding: 10px 18px;
   font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2.8px;
   text-transform: uppercase;
   color: #82806b;
-  transition: color 0.2s, background 0.2s;
-  border-left: 3px solid transparent;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
 }
 #site-navigation ul li a:hover,
 #site-navigation ul li.current a {
-  color: #bababa;
-  background: rgba(130,128,107,0.05);
-  border-left-color: #82806b;
+  color: #5c5763;
+  border-bottom-color: #82806b;
 }
 
 /* Scroll-to-top */
@@ -93,11 +92,12 @@ img { max-width: 100%; display: block; }
 }
 #scroll-top.visible { opacity: 1; }
 
-/* ===== MAIN CONTENT (offset by sidebar) ===== */
+/* ===== MAIN CONTENT (offset by top navbar) ===== */
 #wrap {
-  margin-left: 260px;
-  width: calc(100% - 260px);
+  margin-left: 0;
+  width: 100%;
   min-height: 100vh;
+  padding-top: 80px;
 }
 
 /* ===== HERO SECTION with YouTube video bg ===== */
@@ -817,35 +817,54 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
-/* ===== MOBILE HAMBURGER ===== */
+/* ===== MOBILE HAMBURGER (inside header) ===== */
 .mobile-toggle {
   display: none;
-  position: fixed;
-  top: 14px; right: 14px;
-  z-index: 1100;
-  background: #82806b;
-  color: #fff;
+  background: none;
   border: none;
-  width: 44px; height: 44px;
-  font-size: 20px;
+  color: #82806b;
+  font-size: 24px;
   cursor: pointer;
-  border-radius: 3px;
+  padding: 6px;
+  line-height: 1;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   #site-header {
-    transform: translateX(-100%);
-    width: 240px;
+    padding: 0 20px;
+    height: 70px;
+    flex-wrap: wrap;
+    align-items: center;
   }
-  #site-header.open {
-    transform: translateX(0);
-  }
-  #wrap {
-    margin-left: 0;
+  #wrap { padding-top: 70px; }
+  .mobile-toggle { display: block; }
+  #site-navigation {
+    display: none;
     width: 100%;
+    order: 3;
+    background: #fff;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  .mobile-toggle { display: flex; align-items: center; justify-content: center; }
+  #site-navigation.open { display: block; }
+  #site-navigation ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  #site-navigation ul li a {
+    padding: 14px 24px;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    font-size: 15px;
+  }
+  #site-navigation ul li a:hover,
+  #site-navigation ul li.current a {
+    border-left-color: #82806b;
+    border-bottom-color: transparent;
+    background: rgba(130,128,107,0.05);
+  }
   .services-row { flex-direction: column; }
   .service-card { flex: 1 1 100%; }
   .lavori-col { flex: 1 1 100%; }
@@ -858,10 +877,7 @@ img { max-width: 100%; display: block; }
 </head>
 <body>
 
-<!-- MOBILE TOGGLE -->
-<button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
-
-<!-- LEFT VERTICAL HEADER -->
+<!-- TOP HORIZONTAL HEADER -->
 <div id="outer-wrap">
 <header id="site-header">
   <div id="site-logo">
@@ -879,6 +895,7 @@ img { max-width: 100%; display: block; }
       <li><a href="#">News</a></li>
     </ul>
   </nav>
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
 </header>
 
 <!-- MAIN WRAP -->
@@ -1236,13 +1253,14 @@ prevForm.addEventListener('submit', (e) => {
 
 // ---- Mobile menu toggle ----
 const mobileToggle = document.getElementById('mobileToggle');
-const siteHeader = document.getElementById('site-header');
-mobileToggle.addEventListener('click', () => {
-  siteHeader.classList.toggle('open');
+const siteNav = document.getElementById('site-navigation');
+mobileToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  siteNav.classList.toggle('open');
 });
 document.addEventListener('click', (e) => {
-  if (!siteHeader.contains(e.target) && !mobileToggle.contains(e.target)) {
-    siteHeader.classList.remove('open');
+  if (!siteNav.contains(e.target) && !mobileToggle.contains(e.target)) {
+    siteNav.classList.remove('open');
   }
 });
 
