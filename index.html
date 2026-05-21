@@ -806,6 +806,100 @@ img { max-width: 100%; display: block; }
   #preventivo-success { padding-left: 20px; padding-right: 20px; }
 }
 
+/* ===== NEWS SECTION ===== */
+.news-section {
+  background: #f5f2ee;
+  padding: 70px 40px 80px;
+}
+.news-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.news-section .section-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #82806b;
+  margin-bottom: 14px;
+}
+.news-section .section-header .divider-line {
+  width: 60px; height: 2px;
+  background: #82806b;
+  margin: 0 auto;
+}
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.news-card {
+  flex: 1 1 280px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.news-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+.news-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.4s;
+  opacity: 0.88;
+}
+.news-card:hover .news-card-img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+.news-card-img-wrap {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.news-card-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.news-card-meta {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #82806b;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+}
+.news-card-body h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5c5763;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.news-card-body p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.75;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .news-section { padding: 50px 20px 60px; }
+  .news-grid { flex-direction: column; }
+  .news-card { flex: 1 1 100%; }
+}
+
 /* ===== SCROLL REVEAL ===== */
 .reveal {
   opacity: 0;
@@ -892,7 +986,7 @@ img { max-width: 100%; display: block; }
       <li><a href="#servizi">Servizi</a></li>
       <li><a href="#lavori">I nostri Lavori</a></li>
       <li><a href="#preventivo">Contatti</a></li>
-      <li><a href="#footer">News</a></li>
+      <li><a href="#news">News</a></li>
     </ul>
   </nav>
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
@@ -1084,6 +1178,50 @@ img { max-width: 100%; display: block; }
         <h3>Richiesta inviata!</h3>
         <p>Grazie per averci contattato.<br>Il nostro team ti risponderà entro 24 ore.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- NEWS SECTION -->
+  <section id="news" class="news-section">
+    <div class="section-header">
+      <h2>News &amp; Aggiornamenti</h2>
+      <div class="divider-line"></div>
+    </div>
+    <div class="news-grid">
+
+      <article class="news-card reveal">
+        <div class="news-card-img-wrap">
+          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-scaled.jpeg" alt="Ristrutturazione residenziale a Monza">
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">Maggio 2025 &nbsp;·&nbsp; Cantieri</div>
+          <h3>Completata la ristrutturazione a Monza</h3>
+          <p>Abbiamo concluso con successo un importante intervento di ristrutturazione residenziale nel centro di Monza: nuovi impianti, rifacimento facciate e ammodernamento degli interni nel pieno rispetto delle tempistiche concordate.</p>
+        </div>
+      </article>
+
+      <article class="news-card reveal" style="transition-delay:0.12s">
+        <div class="news-card-img-wrap">
+          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_271413800-scaled.jpeg" alt="Nuovi macchinari RBA Edilizia">
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">Marzo 2025 &nbsp;·&nbsp; Azienda</div>
+          <h3>Investimento in nuova attrezzatura</h3>
+          <p>RBA Edilizia amplia il proprio parco macchine con l'acquisizione di nuovi macchinari all'avanguardia. Un investimento che ci permette di garantire maggiore efficienza, precisione e sicurezza su ogni cantiere.</p>
+        </div>
+      </article>
+
+      <article class="news-card reveal" style="transition-delay:0.24s">
+        <div class="news-card-img-wrap">
+          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_490886124-scaled.jpeg" alt="Superbonus e agevolazioni edilizie 2025">
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">Gennaio 2025 &nbsp;·&nbsp; Normative</div>
+          <h3>Agevolazioni fiscali per l'edilizia 2025</h3>
+          <p>Le novità normative del 2025 aprono nuove opportunità per chi vuole ristrutturare o efficientare la propria abitazione. Il nostro team è aggiornato su tutte le detrazioni disponibili e pronto a guidarvi nella scelta più conveniente.</p>
+        </div>
+      </article>
+
     </div>
   </section>
 
