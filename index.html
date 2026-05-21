@@ -940,6 +940,7 @@ img { max-width: 100%; display: block; }
         <p>LUN a VEN: 8.00-17.00<br>SAB: Chiuso</p>
       </div>
     </div>
+    <a href="#" class="hero-btn" id="openPreventivoModal2" style="margin-top: 40px; display: inline-block;">RICHIEDI UN PREVENTIVO GRATUITO</a>
   </section>
 
   <!-- FOOTER WIDGETS -->
@@ -1070,6 +1071,7 @@ function closePreventivoModal() {
 }
 
 document.getElementById('openPreventivoModal').addEventListener('click', openPreventivoModal);
+document.getElementById('openPreventivoModal2').addEventListener('click', openPreventivoModal);
 document.getElementById('closePreventivoModal').addEventListener('click', closePreventivoModal);
 prevOverlay.addEventListener('click', (e) => { if (e.target === prevOverlay) closePreventivoModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && prevOverlay.classList.contains('open')) closePreventivoModal(); });
