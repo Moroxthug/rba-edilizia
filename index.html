@@ -558,6 +558,172 @@ img { max-width: 100%; display: block; }
   line-height: 1; user-select: none;
 }
 
+/* ===== MODALE PREVENTIVO ===== */
+#preventivo-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 10001;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#preventivo-overlay.open { display: flex; }
+
+#preventivo-modal {
+  background: #fff;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: lbIn 0.3s ease;
+}
+
+#preventivo-modal .modal-header {
+  background: #82806b;
+  padding: 28px 32px 22px;
+}
+#preventivo-modal .modal-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+#preventivo-modal .modal-header p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+#preventivo-modal .modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+#preventivo-modal .modal-close:hover { opacity: 1; }
+
+#preventivo-modal .modal-body {
+  padding: 28px 32px 32px;
+}
+
+.prev-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.prev-form-row .prev-field { flex: 1; }
+
+.prev-field {
+  margin-bottom: 16px;
+}
+.prev-field label {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #82806b;
+  margin-bottom: 6px;
+}
+.prev-field input,
+.prev-field select,
+.prev-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.prev-field input:focus,
+.prev-field select:focus,
+.prev-field textarea:focus {
+  border-color: #82806b;
+  background: #fff;
+}
+.prev-field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+.prev-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2382806b' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.prev-submit-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background: #82806b;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 6px;
+}
+.prev-submit-btn:hover { background: #5c5763; }
+
+#preventivo-success {
+  display: none;
+  text-align: center;
+  padding: 40px 32px;
+}
+#preventivo-success .success-icon {
+  width: 64px; height: 64px;
+  background: #82806b;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+#preventivo-success .success-icon i {
+  font-size: 28px;
+  color: #fff;
+}
+#preventivo-success h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #82806b;
+  margin-bottom: 12px;
+}
+#preventivo-success p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .prev-form-row { flex-direction: column; gap: 0; }
+  #preventivo-modal .modal-header,
+  #preventivo-modal .modal-body,
+  #preventivo-success { padding-left: 20px; padding-right: 20px; }
+}
+
 /* ===== SCROLL REVEAL ===== */
 .reveal {
   opacity: 0;
@@ -650,7 +816,7 @@ img { max-width: 100%; display: block; }
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h2>RBA EDILIZIA<br></h2>
-      <a href="#servizi" class="hero-btn">SCOPRI LA NOSTRA PASSIONE</a>
+      <a href="#" class="hero-btn" id="openPreventivoModal">RICHIEDI UN PREVENTIVO GRATUITO</a>
     </div>
   </section>
 
@@ -812,6 +978,61 @@ img { max-width: 100%; display: block; }
 </div><!-- #wrap -->
 </div><!-- #outer-wrap -->
 
+<!-- MODALE PREVENTIVO -->
+<div id="preventivo-overlay">
+  <div id="preventivo-modal" role="dialog" aria-modal="true" aria-labelledby="prevModalTitle">
+    <div class="modal-header">
+      <h2 id="prevModalTitle">Richiedi un preventivo gratuito</h2>
+      <p>Compila il form e ti ricontatteremo entro 24 ore</p>
+      <span class="modal-close" id="closePreventivoModal" aria-label="Chiudi">&times;</span>
+    </div>
+    <div class="modal-body">
+      <form id="preventivoForm" novalidate>
+        <div class="prev-form-row">
+          <div class="prev-field">
+            <label for="prev-nome">Nome *</label>
+            <input type="text" id="prev-nome" name="nome" placeholder="Mario" required>
+          </div>
+          <div class="prev-field">
+            <label for="prev-cognome">Cognome *</label>
+            <input type="text" id="prev-cognome" name="cognome" placeholder="Rossi" required>
+          </div>
+        </div>
+        <div class="prev-form-row">
+          <div class="prev-field">
+            <label for="prev-telefono">Telefono *</label>
+            <input type="tel" id="prev-telefono" name="telefono" placeholder="+39 000 000 0000" required>
+          </div>
+          <div class="prev-field">
+            <label for="prev-email">Email *</label>
+            <input type="email" id="prev-email" name="email" placeholder="mario@email.it" required>
+          </div>
+        </div>
+        <div class="prev-field">
+          <label for="prev-tipo">Tipo di lavoro *</label>
+          <select id="prev-tipo" name="tipo" required>
+            <option value="" disabled selected>Seleziona un servizio</option>
+            <option value="consulenza">Consulenza</option>
+            <option value="progettazione">Progettazione</option>
+            <option value="realizzazione">Realizzazione</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="prev-field">
+          <label for="prev-messaggio">Messaggio</label>
+          <textarea id="prev-messaggio" name="messaggio" placeholder="Descrivi brevemente il tuo progetto o le tue esigenze..."></textarea>
+        </div>
+        <button type="submit" class="prev-submit-btn">Invia richiesta</button>
+      </form>
+      <div id="preventivo-success">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h3>Richiesta inviata!</h3>
+        <p>Grazie per averci contattato.<br>Il nostro team ti risponderà entro 24 ore.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- LIGHTBOX -->
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
@@ -830,6 +1051,44 @@ img { max-width: 100%; display: block; }
 </a>
 
 <script>
+// ---- Modale Preventivo ----
+const prevOverlay = document.getElementById('preventivo-overlay');
+const prevForm = document.getElementById('preventivoForm');
+const prevSuccess = document.getElementById('preventivo-success');
+
+function openPreventivoModal(e) {
+  if (e) e.preventDefault();
+  prevForm.style.display = '';
+  prevSuccess.style.display = 'none';
+  prevForm.reset();
+  prevOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePreventivoModal() {
+  prevOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('openPreventivoModal').addEventListener('click', openPreventivoModal);
+document.getElementById('closePreventivoModal').addEventListener('click', closePreventivoModal);
+prevOverlay.addEventListener('click', (e) => { if (e.target === prevOverlay) closePreventivoModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && prevOverlay.classList.contains('open')) closePreventivoModal(); });
+
+prevForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nome = document.getElementById('prev-nome').value.trim();
+  const cognome = document.getElementById('prev-cognome').value.trim();
+  const telefono = document.getElementById('prev-telefono').value.trim();
+  const email = document.getElementById('prev-email').value.trim();
+  const tipo = document.getElementById('prev-tipo').value;
+  if (!nome || !cognome || !telefono || !email || !tipo) {
+    alert('Per favore compila tutti i campi obbligatori.');
+    return;
+  }
+  prevForm.style.display = 'none';
+  prevSuccess.style.display = 'block';
+});
+
 // ---- Mobile menu toggle ----
 const mobileToggle = document.getElementById('mobileToggle');
 const siteHeader = document.getElementById('site-header');
