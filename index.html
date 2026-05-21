@@ -888,11 +888,11 @@ img { max-width: 100%; display: block; }
   <nav id="site-navigation">
     <ul>
       <li class="current"><a href="#">Home</a></li>
-      <li><a href="#">Chi siamo</a></li>
-      <li><a href="#">Servizi</a></li>
-      <li><a href="#">I nostri Lavori</a></li>
+      <li><a href="#chi-siamo">Chi siamo</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#lavori">I nostri Lavori</a></li>
       <li><a href="#preventivo">Contatti</a></li>
-      <li><a href="#">News</a></li>
+      <li><a href="#footer">News</a></li>
     </ul>
   </nav>
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
@@ -947,7 +947,7 @@ img { max-width: 100%; display: block; }
   </section>
 
   <!-- PROFESSIONISTI -->
-  <section class="professionisti-section reveal">
+  <section class="professionisti-section reveal" id="chi-siamo">
     <div class="inner">
       <h2>PROFESSIONISTI</h2>
       <div class="divider-line"></div>
@@ -955,7 +955,7 @@ img { max-width: 100%; display: block; }
   </section>
 
   <!-- LAVORI -->
-  <section class="lavori-section">
+  <section class="lavori-section" id="lavori">
     <div class="section-header reveal">
       <h2>ALCUNI DEI NOSTRI LAVORI</h2>
     </div>
@@ -1256,6 +1256,11 @@ document.addEventListener('click', (e) => {
   if (!siteNav.contains(e.target) && !mobileToggle.contains(e.target)) {
     siteNav.classList.remove('open');
   }
+});
+siteNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    siteNav.classList.remove('open');
+  });
 });
 
 // ---- Scroll to top ----
