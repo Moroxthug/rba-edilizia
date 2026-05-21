@@ -558,6 +558,88 @@ img { max-width: 100%; display: block; }
   line-height: 1; user-select: none;
 }
 
+/* ===== FORM PREVENTIVO INLINE (sezione Contatti) ===== */
+.inline-prev-wrap {
+  max-width: 640px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+.inline-prev-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #82806b;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.inline-prev-form {
+  background: #f9f9f9;
+  padding: 30px 32px 34px;
+  border-top: 3px solid #82806b;
+}
+.inline-prev-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+}
+.inline-prev-row .inline-prev-field { flex: 1; }
+.inline-prev-field {
+  margin-bottom: 16px;
+}
+.inline-prev-field label {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #82806b;
+  margin-bottom: 5px;
+}
+.inline-prev-field input,
+.inline-prev-field select,
+.inline-prev-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.inline-prev-field input:focus,
+.inline-prev-field select:focus,
+.inline-prev-field textarea:focus {
+  border-color: #82806b;
+}
+.inline-prev-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.inline-prev-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2382806b' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.inline-prev-success {
+  background: #f9f9f9;
+  border-top: 3px solid #82806b;
+  padding: 40px 32px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .inline-prev-row { flex-direction: column; gap: 0; }
+  .inline-prev-form { padding: 22px 16px 26px; }
+  .inline-prev-success { padding: 30px 16px; }
+}
+
 /* ===== MODALE PREVENTIVO ===== */
 #preventivo-overlay {
   display: none;
@@ -940,7 +1022,52 @@ img { max-width: 100%; display: block; }
         <p>LUN a VEN: 8.00-17.00<br>SAB: Chiuso</p>
       </div>
     </div>
-    <a href="#" class="hero-btn" id="openPreventivoModal2" style="margin-top: 40px; display: inline-block;">RICHIEDI UN PREVENTIVO GRATUITO</a>
+    <div class="inline-prev-wrap reveal">
+      <h2 class="inline-prev-title">RICHIEDI UN PREVENTIVO GRATUITO</h2>
+      <div class="contattaci-divider"></div>
+      <form id="inlinePreventivoForm" class="inline-prev-form" novalidate>
+        <div class="inline-prev-row">
+          <div class="inline-prev-field">
+            <label for="ip-nome">Nome *</label>
+            <input type="text" id="ip-nome" name="nome" placeholder="Mario" required>
+          </div>
+          <div class="inline-prev-field">
+            <label for="ip-cognome">Cognome *</label>
+            <input type="text" id="ip-cognome" name="cognome" placeholder="Rossi" required>
+          </div>
+        </div>
+        <div class="inline-prev-row">
+          <div class="inline-prev-field">
+            <label for="ip-telefono">Telefono *</label>
+            <input type="tel" id="ip-telefono" name="telefono" placeholder="+39 000 000 0000" required>
+          </div>
+          <div class="inline-prev-field">
+            <label for="ip-email">Email *</label>
+            <input type="email" id="ip-email" name="email" placeholder="mario@email.it" required>
+          </div>
+        </div>
+        <div class="inline-prev-field">
+          <label for="ip-tipo">Tipo di lavoro *</label>
+          <select id="ip-tipo" name="tipo" required>
+            <option value="" disabled selected>Seleziona un servizio</option>
+            <option value="consulenza">Consulenza</option>
+            <option value="progettazione">Progettazione</option>
+            <option value="realizzazione">Realizzazione</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="inline-prev-field">
+          <label for="ip-messaggio">Messaggio</label>
+          <textarea id="ip-messaggio" name="messaggio" placeholder="Descrivi brevemente il tuo progetto o le tue esigenze..."></textarea>
+        </div>
+        <button type="submit" class="prev-submit-btn">Invia richiesta</button>
+      </form>
+      <div id="inline-prev-success" style="display:none;" class="inline-prev-success">
+        <div class="success-icon" style="margin: 0 auto 20px;"><i class="fas fa-check"></i></div>
+        <h3>Richiesta inviata!</h3>
+        <p>Grazie per averci contattato.<br>Il nostro team ti risponderà entro 24 ore.</p>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER WIDGETS -->
@@ -1071,7 +1198,23 @@ function closePreventivoModal() {
 }
 
 document.getElementById('openPreventivoModal').addEventListener('click', openPreventivoModal);
-document.getElementById('openPreventivoModal2').addEventListener('click', openPreventivoModal);
+// ---- Form preventivo inline ----
+const inlineForm = document.getElementById('inlinePreventivoForm');
+const inlineSuccess = document.getElementById('inline-prev-success');
+inlineForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nome = document.getElementById('ip-nome').value.trim();
+  const cognome = document.getElementById('ip-cognome').value.trim();
+  const telefono = document.getElementById('ip-telefono').value.trim();
+  const email = document.getElementById('ip-email').value.trim();
+  const tipo = document.getElementById('ip-tipo').value;
+  if (!nome || !cognome || !telefono || !email || !tipo) {
+    alert('Per favore compila tutti i campi obbligatori.');
+    return;
+  }
+  inlineForm.style.display = 'none';
+  inlineSuccess.style.display = 'block';
+});
 document.getElementById('closePreventivoModal').addEventListener('click', closePreventivoModal);
 prevOverlay.addEventListener('click', (e) => { if (e.target === prevOverlay) closePreventivoModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && prevOverlay.classList.contains('open')) closePreventivoModal(); });
