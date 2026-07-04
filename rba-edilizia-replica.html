@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it-IT">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RBA EDILIZIA</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://rba-edilizia.it/">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/solid.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/regular.min.css">
 <style>
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -105,6 +109,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   min-height: 500px;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
@@ -605,6 +610,7 @@ img { max-width: 100%; display: block; }
   .icon-boxes { flex-direction: column; align-items: center; }
   .icon-box { max-width: 100%; }
   .footer-widgets-inner { flex-direction: column; }
+  .professionisti-section h2 { font-size: 28px; letter-spacing: 5px; }
 }
 </style>
 </head>
@@ -665,14 +671,14 @@ img { max-width: 100%; display: block; }
         </div>
       </div>
       <div class="service-card">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-scaled.jpeg" alt="Progettazione" loading="lazy">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-768x512.jpeg" alt="Progettazione" loading="lazy">
         <div class="service-card-content">
           <h3>PROGETTAZIONE</h3>
           <p>Competenze tecniche e professionalità per la realizzazione della vostra nuova abitazione.</p>
         </div>
       </div>
       <div class="service-card">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2023/12/AdobeStock_685607114-scaled.jpeg" alt="Realizzazione" loading="lazy">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2023/12/AdobeStock_685607114-768x512.jpeg" alt="Realizzazione" loading="lazy">
         <div class="service-card-content">
           <h3>REALIZZAZIONE</h3>
           <p>Materiali di qualità e lavorazioni a regola d'arte<br>nella realizzazione della vostra casa</p>
@@ -732,7 +738,7 @@ img { max-width: 100%; display: block; }
   <!-- ATTREZZATURA -->
   <section class="attrezzatura-section">
     <div class="attr-image-col reveal">
-      <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/AdobeStock_79111214-removebg.png" alt="Attrezzatura" loading="lazy">
+      <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/AdobeStock_79111214-removebg-300x200.png" alt="Attrezzatura" loading="lazy">
     </div>
     <div class="attr-text-col reveal" style="transition-delay:0.15s">
       <h2>ATTREZZATURA ALL'AVANGUARDIA</h2>
@@ -846,7 +852,7 @@ document.addEventListener('click', (e) => {
 const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
   scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-});
+}, { passive: true });
 scrollTopBtn.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });

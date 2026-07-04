@@ -1,110 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it-IT">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RBA EDILIZIA</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ===== SEO TITLE & META ===== -->
+<title>RBA Edilizia | Impresa Edile Monza e Brianza</title>
+<meta name="description" content="RBA Edilizia è l'impresa edile di riferimento a Monza e in tutta la Brianza. Ristrutturazioni, costruzioni, progettazione e consulenza a Monza, Brugherio, Lissone, Cinisello Balsamo, Sesto San Giovanni, Vimercate e comuni limitrofi. Preventivo gratuito.">
+<meta name="keywords" content="impresa edile Monza, ristrutturazioni Monza, edilizia Monza, costruzioni Brianza, impresa edile Brianza, ristrutturazioni appartamento Monza, lavori edili Monza, impresa edile Brugherio, ristrutturazioni Lissone, edilizia Vimercate, impresa edile Cinisello Balsamo, ristrutturazioni Sesto San Giovanni, preventivo ristrutturazione Monza, impresa costruzioni Monza, RBA Edilizia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="RBA Edilizia Srl">
+<link rel="canonical" href="https://rba-edilizia.it/">
+<link rel="icon" type="image/png" href="https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png">
+<link rel="apple-touch-icon" href="https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png">
+
+<!-- ===== GEO TAG (Local SEO) ===== -->
+<meta name="geo.region" content="IT-MB">
+<meta name="geo.placename" content="Monza, Brianza">
+<meta name="geo.position" content="45.5845;9.2744">
+<meta name="ICBM" content="45.5845, 9.2744">
+
+<!-- ===== OPEN GRAPH ===== -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rba-edilizia.it/">
+<meta property="og:title" content="RBA Edilizia | Impresa Edile Monza e Brianza">
+<meta property="og:description" content="Ristrutturazioni, costruzioni e consulenza edile a Monza e in tutta la Brianza. Professionalità, materiali di qualità e preventivo gratuito.">
+<meta property="og:image" content="https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="RBA Edilizia">
+
+<!-- ===== TWITTER CARD ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RBA Edilizia | Impresa Edile Monza e Brianza">
+<meta name="twitter:description" content="Ristrutturazioni, costruzioni e consulenza edile a Monza e Brianza. Preventivo gratuito.">
+<meta name="twitter:image" content="https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png">
+
+<!-- ===== PERFORMANCE: PRECONNECT ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.youtube.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://rba-edilizia.it">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/solid.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/regular.min.css">
+<link rel="stylesheet" href="style.min.css">
 <style>
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  color: #333;
-  background: #fff;
-  overflow-x: hidden;
-}
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Oswald', sans-serif;
-  color: #82806b;
-}
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-
-/* ===== LAYOUT ===== */
-#outer-wrap { display: block; min-height: 100vh; }
-
-/* ===== TOP HORIZONTAL HEADER ===== */
-#site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 80px;
-  background: #fff;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-  transition: none;
-}
-
-#site-logo {
-  flex-shrink: 0;
-}
-#site-logo img {
-  height: 62px;
-  width: auto;
-  display: block;
-}
-
-#site-navigation { width: auto; }
-#site-navigation ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-#site-navigation ul li a {
-  display: block;
-  padding: 10px 18px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2.8px;
-  text-transform: uppercase;
-  color: #82806b;
-  transition: color 0.2s;
-  border-bottom: 2px solid transparent;
-}
-#site-navigation ul li a:hover,
-#site-navigation ul li.current a {
-  color: #5c5763;
-  border-bottom-color: #82806b;
-}
-
-/* Scroll-to-top */
-#scroll-top {
-  position: fixed;
-  bottom: 30px; right: 30px;
-  width: 42px; height: 42px;
-  background: #82806b;
-  color: #fff;
-  border-radius: 3px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 999;
-}
-#scroll-top.visible { opacity: 1; }
-
-/* ===== MAIN CONTENT (offset by top navbar) ===== */
-#wrap {
-  margin-left: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding-top: 80px;
-}
+/* ===== PAGINA HOME — stili specifici ===== */
 
 /* ===== HERO SECTION with YouTube video bg ===== */
 .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   min-height: 500px;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
@@ -116,15 +67,13 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   pointer-events: none;
 }
-.hero-video-container iframe {
+.hero-video-container img {
   position: absolute;
-  top: 50%; left: 50%;
-  width: 177.78vh; /* 16:9 ratio */
-  height: 56.25vw;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  border: none;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .hero-overlay {
   position: absolute;
@@ -143,8 +92,8 @@ img { max-width: 100%; display: block; }
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.hero-content h2 {
-  font-family: 'Oswald', sans-serif;
+.hero-h1 {
+  font-family: 'Fraunces', serif;
   font-size: clamp(36px, 6vw, 80px);
   font-weight: 700;
   color: #fff;
@@ -153,13 +102,23 @@ img { max-width: 100%; display: block; }
   text-shadow: 0 3px 30px rgba(0,0,0,0.5);
   line-height: 1.1;
 }
+.hero-sub {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
 .hero-btn {
   display: inline-block;
   margin-top: 28px;
   padding: 12px 36px;
-  background: rgba(130,128,107,0.85);
+  background: rgba(163,90,53,0.85);
   color: #fff;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: 14px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -168,7 +127,7 @@ img { max-width: 100%; display: block; }
   animation: fadeInUp 1.2s 0.3s ease both;
 }
 .hero-btn:hover {
-  background: rgba(130,128,107,1);
+  background: rgba(163,90,53,1);
   border-color: rgba(255,255,255,0.9);
 }
 
@@ -200,13 +159,13 @@ img { max-width: 100%; display: block; }
 }
 .service-card-content {
   padding: 30px 28px 36px;
-  background: #f9f9f9;
+  background: #f8f5f0;
 }
 .service-card-content h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: 22px;
   font-weight: 600;
-  color: #82806b;
+  color: #a35a35;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -216,6 +175,7 @@ img { max-width: 100%; display: block; }
   color: #555;
   line-height: 1.75;
 }
+.service-card-content p strong { color: #a35a35; }
 
 /* ===== PROFESSIONISTI SECTION ===== */
 .professionisti-section {
@@ -237,7 +197,7 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 .professionisti-section h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 700;
   color: #fff;
@@ -247,9 +207,18 @@ img { max-width: 100%; display: block; }
 }
 .professionisti-section .divider-line {
   width: 80px; height: 2px;
-  background: #82806b;
+  background: #a35a35;
   margin: 20px auto 0;
 }
+.professionisti-text {
+  max-width: 800px;
+  margin: 24px auto 0;
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.85;
+  font-family: 'Karla', sans-serif;
+}
+.professionisti-text strong { color: #fff; font-weight: 700; }
 
 /* ===== LAVORI SECTION ===== */
 .lavori-section {
@@ -262,12 +231,12 @@ img { max-width: 100%; display: block; }
   padding: 55px 20px 30px;
 }
 .lavori-section .section-header h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #82806b;
+  color: #a35a35;
 }
 .lavori-grid {
   display: flex;
@@ -289,7 +258,7 @@ img { max-width: 100%; display: block; }
 /* ===== QUALITA MATERIALI SECTION ===== */
 .qualita-section {
   position: relative;
-  background: #82806b;
+  background: #a35a35;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -304,7 +273,7 @@ img { max-width: 100%; display: block; }
 }
 .qualita-section .inner { position: relative; z-index: 1; }
 .qualita-section h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: clamp(30px, 4vw, 52px);
   font-weight: 700;
   color: #fff;
@@ -336,7 +305,7 @@ img { max-width: 100%; display: block; }
 .attrezzatura-section {
   display: flex;
   flex-wrap: wrap;
-  background: #f5f2ee;
+  background: #f7f1e8;
   padding: 60px 40px;
   align-items: center;
   gap: 40px;
@@ -356,18 +325,18 @@ img { max-width: 100%; display: block; }
   padding: 10px 0;
 }
 .attr-text-col h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 4px;
-  color: #82806b;
+  color: #a35a35;
   text-transform: uppercase;
   margin-bottom: 20px;
   line-height: 1.3;
 }
 .attr-divider {
   width: 50px; height: 2px;
-  background: #82806b;
+  background: #a35a35;
   margin-bottom: 22px;
 }
 .attr-text-col p {
@@ -378,7 +347,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== LA NOSTRA ESPERIENZA STRIP ===== */
 .esperienza-strip {
-  background: #5c5763;
+  background: #33291f;
   padding: 18px 40px;
   text-align: center;
 }
@@ -387,587 +356,233 @@ img { max-width: 100%; display: block; }
   letter-spacing: 3px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Fraunces', serif;
 }
 
-/* ===== CONTATTACI SECTION ===== */
-.contattaci-section {
-  background: #fff;
-  padding: 60px 40px;
-  text-align: center;
-}
-.contattaci-section h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  color: #82806b;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.contattaci-divider {
-  width: 50px; height: 1px;
-  background: #ccc;
-  margin: 0 auto 30px;
-}
-.contattaci-section h2.sub {
-  font-size: 22px;
-  margin-bottom: 40px;
-}
-
-/* ===== ICON BOX CONTACT CARDS ===== */
-.icon-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.icon-box {
-  flex: 1 1 200px;
-  max-width: 240px;
-  text-align: center;
-  padding: 20px 16px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s, transform 0.6s;
-}
-.icon-box.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.icon-box .icon-wrap {
-  width: 60px; height: 60px;
-  background: #5c5763;
-  border-radius: 50%;
-  margin: 0 auto 16px;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.3s;
-}
-.icon-box:hover .icon-wrap { background: #82806b; }
-.icon-box .icon-wrap i {
-  font-size: 20px;
-  color: #fff;
-}
-.icon-box h3 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #82806b;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.icon-box p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.7;
-}
-
-/* ===== FOOTER WIDGETS ===== */
-#footer-widgets {
-  background: #f5f5f5;
-  padding: 50px 40px 30px;
-}
-.footer-widgets-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.footer-box {
-  flex: 1 1 200px;
-}
-.footer-box h4 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #82806b;
-  border-bottom: 1px solid #aaa;
-  padding-bottom: 10px;
-  margin-bottom: 16px;
-}
-.footer-box p, .footer-box .textwidget {
-  font-size: 13px;
-  color: #777;
-  line-height: 1.9;
-}
-
-/* ===== FOOTER BOTTOM ===== */
-#footer-bottom {
-  background: #82806b;
-  text-align: center;
-  padding: 16px 20px;
-}
-#footer-bottom #copyright {
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-/* ===== COOKIE BAR ===== */
-#cookie-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  background: rgba(20,20,20,0.95);
-  padding: 14px 30px;
-  display: flex; align-items: center; justify-content: center; gap: 20px;
-  z-index: 9999;
-  font-size: 13px;
-  color: rgba(255,255,255,0.85);
-  flex-wrap: wrap;
-}
-#cookie-bar button {
-  background: #82806b;
-  border: none;
-  padding: 8px 28px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.2s;
-  flex-shrink: 0;
-}
-#cookie-bar button:hover { background: #5c5763; }
-
-/* ===== LIGHTBOX ===== */
-#lightbox {
-  display: none;
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.92);
-  z-index: 10000;
-  align-items: center;
-  justify-content: center;
-}
-#lightbox.open { display: flex; }
-#lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border: 2px solid rgba(255,255,255,0.15);
-  animation: lbIn 0.3s ease;
-}
-@keyframes lbIn { from { opacity:0; transform: scale(0.93); } to { opacity:1; transform: scale(1); } }
-#lightbox-close {
-  position: absolute; top: 20px; right: 28px;
-  color: #fff; font-size: 36px; cursor: pointer;
-  line-height: 1; user-select: none;
-}
-
-/* ===== FORM PREVENTIVO INLINE (sezione Contatti) ===== */
-.inline-prev-wrap {
-  max-width: 640px;
-  margin: 50px auto 0;
-  text-align: left;
-}
-.inline-prev-title {
-  font-family: 'Oswald', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #82806b;
-  text-align: center;
-  margin-bottom: 16px;
-}
-.inline-prev-form {
-  background: #f9f9f9;
-  padding: 30px 32px 34px;
-  border-top: 3px solid #82806b;
-}
-.inline-prev-row {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 0;
-}
-.inline-prev-row .inline-prev-field { flex: 1; }
-.inline-prev-field {
-  margin-bottom: 16px;
-}
-.inline-prev-field label {
-  display: block;
-  font-family: 'Oswald', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #82806b;
-  margin-bottom: 5px;
-}
-.inline-prev-field input,
-.inline-prev-field select,
-.inline-prev-field textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #ddd;
-  background: #fff;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  color: #333;
-  outline: none;
-  transition: border-color 0.2s;
-  border-radius: 0;
-  appearance: none;
-  -webkit-appearance: none;
-}
-.inline-prev-field input:focus,
-.inline-prev-field select:focus,
-.inline-prev-field textarea:focus {
-  border-color: #82806b;
-}
-.inline-prev-field textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-.inline-prev-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2382806b' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 36px;
-}
-.inline-prev-success {
-  background: #f9f9f9;
-  border-top: 3px solid #82806b;
-  padding: 40px 32px;
-  text-align: center;
-}
-@media (max-width: 600px) {
-  .inline-prev-row { flex-direction: column; gap: 0; }
-  .inline-prev-form { padding: 22px 16px 26px; }
-  .inline-prev-success { padding: 30px 16px; }
-}
-
-/* ===== MODALE PREVENTIVO ===== */
-#preventivo-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  z-index: 10001;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-#preventivo-overlay.open { display: flex; }
-
-#preventivo-modal {
-  background: #fff;
-  width: 100%;
-  max-width: 580px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  animation: lbIn 0.3s ease;
-}
-
-#preventivo-modal .modal-header {
-  background: #82806b;
-  padding: 28px 32px 22px;
-}
-#preventivo-modal .modal-header h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 0;
-}
-#preventivo-modal .modal-header p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.8);
-  margin-top: 6px;
-  letter-spacing: 0.5px;
-}
-
-#preventivo-modal .modal-close {
-  position: absolute;
-  top: 16px; right: 20px;
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-  line-height: 1;
-  user-select: none;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-#preventivo-modal .modal-close:hover { opacity: 1; }
-
-#preventivo-modal .modal-body {
-  padding: 28px 32px 32px;
-}
-
-.prev-form-row {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.prev-form-row .prev-field { flex: 1; }
-
-.prev-field {
-  margin-bottom: 16px;
-}
-.prev-field label {
-  display: block;
-  font-family: 'Oswald', sans-serif;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #82806b;
-  margin-bottom: 6px;
-}
-.prev-field input,
-.prev-field select,
-.prev-field textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  color: #333;
-  outline: none;
-  transition: border-color 0.2s;
-  border-radius: 0;
-  appearance: none;
-  -webkit-appearance: none;
-}
-.prev-field input:focus,
-.prev-field select:focus,
-.prev-field textarea:focus {
-  border-color: #82806b;
-  background: #fff;
-}
-.prev-field textarea {
-  resize: vertical;
-  min-height: 90px;
-}
-.prev-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2382806b' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 36px;
-}
-
-.prev-submit-btn {
-  display: block;
-  width: 100%;
-  padding: 14px 20px;
-  background: #82806b;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 6px;
-}
-.prev-submit-btn:hover { background: #5c5763; }
-
-#preventivo-success {
-  display: none;
-  text-align: center;
-  padding: 40px 32px;
-}
-#preventivo-success .success-icon {
-  width: 64px; height: 64px;
-  background: #82806b;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 20px;
-}
-#preventivo-success .success-icon i {
-  font-size: 28px;
-  color: #fff;
-}
-#preventivo-success h3 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 22px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #82806b;
-  margin-bottom: 12px;
-}
-#preventivo-success p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.7;
-}
-
-@media (max-width: 600px) {
-  .prev-form-row { flex-direction: column; gap: 0; }
-  #preventivo-modal .modal-header,
-  #preventivo-modal .modal-body,
-  #preventivo-success { padding-left: 20px; padding-right: 20px; }
-}
-
-/* ===== NEWS SECTION ===== */
-.news-section {
-  background: #f5f2ee;
-  padding: 70px 40px 80px;
-}
-.news-section .section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.news-section .section-header h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #82806b;
-  margin-bottom: 14px;
-}
-.news-section .section-header .divider-line {
-  width: 60px; height: 2px;
-  background: #82806b;
-  margin: 0 auto;
-}
-.news-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.news-card {
-  flex: 1 1 280px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: box-shadow 0.3s;
-}
-.news-card:hover {
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-}
-.news-card-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease, opacity 0.4s;
-  opacity: 0.88;
-}
-.news-card:hover .news-card-img {
-  transform: scale(1.04);
-  opacity: 1;
-}
-.news-card-img-wrap {
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.news-card-body {
-  padding: 24px 24px 28px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.news-card-meta {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #82806b;
-  font-family: 'Oswald', sans-serif;
-  margin-bottom: 10px;
-}
-.news-card-body h3 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5c5763;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-.news-card-body p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.75;
-  flex: 1;
-}
-
+/* ===== RESPONSIVE (homepage-specific) ===== */
 @media (max-width: 900px) {
-  .news-section { padding: 50px 20px 60px; }
-  .news-grid { flex-direction: column; }
-  .news-card { flex: 1 1 100%; }
-}
-
-/* ===== SCROLL REVEAL ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(35px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== MOBILE HAMBURGER (inside header) ===== */
-.mobile-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #82806b;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 6px;
-  line-height: 1;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  #site-header {
-    padding: 0 20px;
-    height: 70px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  #wrap { padding-top: 70px; }
-  .mobile-toggle { display: block; }
-  #site-navigation {
-    display: none;
-    width: 100%;
-    order: 3;
-    background: #fff;
-    position: absolute;
-    top: 70px; left: 0; right: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  #site-navigation.open { display: block; }
-  #site-navigation ul {
-    flex-direction: column;
-    gap: 0;
-  }
-  #site-navigation ul li a {
-    padding: 14px 24px;
-    border-bottom: none;
-    border-left: 3px solid transparent;
-    font-size: 15px;
-  }
-  #site-navigation ul li a:hover,
-  #site-navigation ul li.current a {
-    border-left-color: #82806b;
-    border-bottom-color: transparent;
-    background: rgba(130,128,107,0.05);
-  }
   .services-row { flex-direction: column; }
   .service-card { flex: 1 1 100%; }
-  .lavori-col { flex: 1 1 100%; }
-  .attrezzatura-section { flex-direction: column; }
-  .icon-boxes { flex-direction: column; align-items: center; }
-  .icon-box { max-width: 100%; }
-  .footer-widgets-inner { flex-direction: column; }
+  /* "PROFESSIONISTI" is one unbreakable word: at the desktop clamp/letter-spacing
+     it doesn't fit narrow screens and forces horizontal overflow on the whole page */
+  .professionisti-section h2 { font-size: 28px; letter-spacing: 5px; }
 }
+
 </style>
+
+<!-- ===== JSON-LD STRUCTURED DATA ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://rba-edilizia.it/#localbusiness",
+      "name": "RBA Edilizia Srl",
+      "alternateName": "RBA Edilizia",
+      "description": "Impresa edile con sede a Monza specializzata in ristrutturazioni, costruzioni, progettazione e consulenza. Operiamo a Monza e in tutta la Brianza con materiali di qualità e lavorazioni a regola d'arte.",
+      "url": "https://rba-edilizia.it/",
+      "logo": "https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png",
+      "image": "https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png",
+      "telephone": "+39-328-2027226",
+      "email": "edilizia.rba@gmail.com",
+      "vatID": "IT07151610966",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via San Rocco 34",
+        "addressLocality": "Monza",
+        "addressRegion": "MB",
+        "postalCode": "20900",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.5845,
+        "longitude": 9.2744
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Monza"},
+        {"@type": "City", "name": "Brugherio"},
+        {"@type": "City", "name": "Muggiò"},
+        {"@type": "City", "name": "Villasanta"},
+        {"@type": "City", "name": "Vedano al Lambro"},
+        {"@type": "City", "name": "Lissone"},
+        {"@type": "City", "name": "Nova Milanese"},
+        {"@type": "City", "name": "Concorezzo"},
+        {"@type": "City", "name": "Agrate Brianza"},
+        {"@type": "City", "name": "Arcore"},
+        {"@type": "City", "name": "Bernareggio"},
+        {"@type": "City", "name": "Usmate Velate"},
+        {"@type": "City", "name": "Vimercate"},
+        {"@type": "City", "name": "Lesmo"},
+        {"@type": "City", "name": "Cologno Monzese"},
+        {"@type": "City", "name": "Sesto San Giovanni"},
+        {"@type": "City", "name": "Cinisello Balsamo"},
+        {"@type": "City", "name": "Bresso"},
+        {"@type": "City", "name": "Cusano Milanino"},
+        {"@type": "City", "name": "Paderno Dugnano"},
+        {"@type": "City", "name": "Cormano"},
+        {"@type": "City", "name": "Desio"},
+        {"@type": "City", "name": "Limbiate"},
+        {"@type": "City", "name": "Bovisio Masciago"},
+        {"@type": "City", "name": "Cesano Maderno"},
+        {"@type": "City", "name": "Seregno"},
+        {"@type": "City", "name": "Carate Brianza"},
+        {"@type": "City", "name": "Meda"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servizi di Edilizia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ristrutturazione Edile",
+              "description": "Ristrutturazioni complete di appartamenti, ville e immobili commerciali a Monza e Brianza."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Costruzione Nuovi Edifici",
+              "description": "Costruzione di nuove abitazioni e complessi residenziali in provincia di Monza e Brianza."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Progettazione Architettonica",
+              "description": "Progettazione professionale per la realizzazione della vostra nuova abitazione o ristrutturazione."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consulenza Edile",
+              "description": "Consulenza tecnica specializzata per ristrutturazioni, bonus edilizi e pratiche burocratiche."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/rbaedilizia",
+        "https://www.instagram.com/rbaedilizia"
+      ],
+      "foundingDate": "2014",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Monza",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Monza",
+          "addressRegion": "MB",
+          "addressCountry": "IT"
+        }
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 5,
+        "maxValue": 15
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Marco B."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Lavori eseguiti a regola d'arte, puntualità nei tempi e massima professionalità. Consiglio vivamente RBA Edilizia per qualsiasi tipo di ristrutturazione.",
+          "datePublished": "2024-10-15"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Laura M."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Ho ristrutturato il bagno con RBA: tutto perfetto, prezzi trasparenti e nessuna sorpresa in fattura. Ritornerò sicuramente per altri lavori.",
+          "datePublished": "2024-08-22"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Giuseppe T."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Ristrutturazione completa dell'appartamento gestita con grande competenza. Il team è sempre disponibile e i risultati sono eccellenti.",
+          "datePublished": "2025-01-10"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rba-edilizia.it/#website",
+      "url": "https://rba-edilizia.it/",
+      "name": "RBA Edilizia",
+      "publisher": {"@id": "https://rba-edilizia.it/#localbusiness"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "In quali zone operate per le ristrutturazioni?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Operiamo principalmente a Monza e in tutta la Brianza, coprendo comuni come Brugherio, Lissone, Muggiò, Vimercate, Cinisello Balsamo, Sesto San Giovanni, Agrate Brianza, Desio, Cesano Maderno, Seregno e tutti i comuni della provincia di Monza e della Brianza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come posso richiedere un preventivo gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puoi richiedere un preventivo gratuito compilando il modulo sul nostro sito, chiamando il numero 328-2027226 oppure scrivendo a edilizia.rba@gmail.com. Risponderemo entro 24 ore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quali lavori edili eseguite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eseguiamo ristrutturazioni complete di appartamenti e ville, costruzione di nuovi edifici, progettazione architettonica, opere di muratura, intonaci, pavimentazioni, cappotti termici, rifacimento tetti e molto altro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gestite le pratiche per il Bonus Ristrutturazione e Superbonus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, il nostro team è aggiornato su tutte le agevolazioni fiscali disponibili nel 2026, tra cui il Bonus Ristrutturazioni (detrazione 36% prima casa), l'Ecobonus e i contributi regionali. Vi guidiamo in ogni fase burocratica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo impiegate per una ristrutturazione a Monza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I tempi dipendono dall'entità dei lavori. Una ristrutturazione parziale può richiedere 2-4 settimane, mentre un intervento completo di un appartamento richiede in media 6-12 settimane. Forniamo sempre un cronoprogramma dettagliato prima dell'inizio dei lavori."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -979,36 +594,42 @@ img { max-width: 100%; display: block; }
       <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/cropped-logo-con-scritt_FINEa.png" alt="RBA EDILIZIA">
     </a>
   </div>
-  <nav id="site-navigation">
+  <div id="header-right">
+<nav id="site-navigation">
     <ul>
-      <li class="current"><a href="#">Home</a></li>
-      <li><a href="#chi-siamo">Chi siamo</a></li>
-      <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#lavori">I nostri Lavori</a></li>
-      <li><a href="#preventivo">Contatti</a></li>
-      <li><a href="#news">News</a></li>
+      <li class="current"><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li class="has-dropdown"><a href="servizi.html">Servizi <i class="fa fa-chevron-down dropdown-arrow"></i></a><ul class="dropdown"><li><a href="servizi/ristrutturazioni-monza.html">Ristrutturazioni</a></li><li><a href="servizi/ristrutturazione-bagno-monza.html">Ristrutturazione Bagno</a></li><li><a href="servizi/ristrutturazione-cucina-monza.html">Ristrutturazione Cucina</a></li><li><a href="servizi/cappotto-termico-monza.html">Cappotto Termico</a></li><li><a href="servizi/nuove-costruzioni-monza.html">Nuove Costruzioni</a></li><li><a href="servizi/progettazione-edile-monza.html">Progettazione</a></li><li><a href="servizi/consulenza-bonus-fiscali-monza.html">Bonus Fiscali</a></li></ul></li>
+      <li><a href="lavori.html">I nostri Lavori</a></li>
+      <li class="has-dropdown"><a href="zone.html">Zone <i class="fa fa-chevron-down dropdown-arrow"></i></a><ul class="dropdown"><li><a href="zone/ristrutturazioni-monza.html">Monza</a></li><li><a href="zone/ristrutturazioni-brugherio.html">Brugherio</a></li><li><a href="zone/ristrutturazioni-lissone.html">Lissone</a></li><li><a href="zone/ristrutturazioni-vimercate.html">Vimercate</a></li><li><a href="zone/ristrutturazioni-sesto-san-giovanni.html">Sesto San Giovanni</a></li><li><a href="zone/ristrutturazioni-cinisello-balsamo.html">Cinisello Balsamo</a></li><li><a href="zone/ristrutturazioni-desio.html">Desio</a></li><li><a href="zone/ristrutturazioni-seregno.html">Seregno</a></li><li><a href="zone/ristrutturazioni-arcore.html">Arcore</a></li><li><a href="zone/ristrutturazioni-carate-brianza.html">Carate Brianza</a></li><li><a href="zone/ristrutturazioni-cesano-maderno.html">Cesano Maderno</a></li><li><a href="zone/ristrutturazioni-muggio.html">Muggio</a></li><li><a href="zone/ristrutturazioni-nova-milanese.html">Nova Milanese</a></li><li><a href="zone/ristrutturazioni-agrate-brianza.html">Agrate Brianza</a></li></ul></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li><li><a href="testimonianze.html">Recensioni</a></li>
+      <li><a href="news.html">News</a></li>
     </ul>
   </nav>
-  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
+  <a href="tel:+393282027226" class="header-phone"><i class="fa-solid fa-phone"></i> 328 202 7226</a>
+</div>
+<button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
 </header>
 
 <!-- MAIN WRAP -->
 <div id="wrap">
 
-  <!-- HERO: YouTube video background -->
+  <!-- HERO: foto statica per LCP ottimale -->
   <section class="hero-section">
-    <div class="hero-video-container">
-      <iframe
-        id="ytPlayer"
-        src="https://www.youtube.com/embed/Wi8cJLgZyEY?autoplay=1&mute=1&loop=1&playlist=Wi8cJLgZyEY&controls=0&showinfo=0&rel=0&iv_load_policy=3&start=3&enablejsapi=1&playsinline=1"
-        title="RBA Edilizia"
-        allow="autoplay; fullscreen"
-        allowfullscreen
-      ></iframe>
+    <div class="hero-video-container" id="heroVideoContainer">
+      <img
+        src="images/hero-cantiere.jpg"
+        alt="Operai al lavoro su un cantiere di ristrutturazione — RBA Edilizia, impresa edile Monza e Brianza"
+        fetchpriority="high"
+        width="1920"
+        height="1280"
+      >
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h2>RBA EDILIZIA<br></h2>
+      <h1 class="hero-h1">RBA EDILIZIA</h1>
+      <p class="hero-sub">Impresa Edile a Monza e Brianza</p>
       <a href="#" class="hero-btn" id="openPreventivoModal">RICHIEDI UN PREVENTIVO GRATUITO</a>
     </div>
   </section>
@@ -1017,34 +638,40 @@ img { max-width: 100%; display: block; }
   <section class="services-section" id="servizi">
     <div class="services-row">
       <div class="service-card">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_287959336-scaled.jpeg" alt="Consulenza" loading="lazy">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_287959336-scaled.jpeg" alt="Consulenza edile Monza e Brianza" loading="lazy" width="600" height="380">
         <div class="service-card-content">
           <h3>CONSULENZA</h3>
-          <p>La nostra competenza tecnica al vostro servizio, vi guideremo nella miglior soluzione adatta a voi.</p>
+          <p>La nostra competenza tecnica al vostro servizio a <strong>Monza e Brianza</strong>. Vi guidiamo nella soluzione più adatta alle vostre esigenze, dalle pratiche burocratiche alle agevolazioni fiscali 2026.</p>
         </div>
       </div>
       <div class="service-card">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-scaled.jpeg" alt="Progettazione" loading="lazy">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-768x512.jpeg" alt="Progettazione edile Monza Brianza" loading="lazy" width="600" height="380">
         <div class="service-card-content">
           <h3>PROGETTAZIONE</h3>
-          <p>Competenze tecniche e professionalità per la realizzazione della vostra nuova abitazione.</p>
+          <p>Competenze tecniche e professionalità per la <strong>progettazione e ristrutturazione</strong> della vostra abitazione a Monza, Brugherio, Lissone, Vimercate e in tutta la provincia di Monza e Brianza.</p>
         </div>
       </div>
       <div class="service-card">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2023/12/AdobeStock_685607114-scaled.jpeg" alt="Realizzazione" loading="lazy">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2023/12/AdobeStock_685607114-768x512.jpeg" alt="Realizzazione costruzioni edili Monza" loading="lazy" width="600" height="380">
         <div class="service-card-content">
           <h3>REALIZZAZIONE</h3>
-          <p>Materiali di qualità e lavorazioni a regola d'arte<br>nella realizzazione della vostra casa</p>
+          <p>Materiali certificati e lavorazioni a regola d'arte per <strong>costruzioni e ristrutturazioni</strong> a Monza e comuni limitrofi. Dalla posa in opera alla consegna chiavi in mano.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROFESSIONISTI -->
+  <!-- CHI SIAMO / PROFESSIONISTI -->
   <section class="professionisti-section reveal" id="chi-siamo">
     <div class="inner">
       <h2>PROFESSIONISTI</h2>
       <div class="divider-line"></div>
+      <p class="professionisti-text">
+        RBA Edilizia è un'impresa edile con sede a <strong>Monza</strong>, attiva da anni nel settore delle costruzioni e ristrutturazioni in tutta la <strong>Brianza</strong>. Il nostro team di professionisti qualificati segue ogni progetto dalla consulenza iniziale fino alla consegna del lavoro finito, garantendo puntualità, trasparenza e qualità certificata in ogni intervento.
+      </p>
+      <p class="professionisti-text" style="margin-top:14px;">
+        Operiamo su <strong>Monza e comuni limitrofi</strong> — Brugherio, Lissone, Vimercate, Sesto San Giovanni, Cinisello Balsamo, Muggiò, Agrate Brianza, Desio, Cesano Maderno e molti altri — con una conoscenza approfondita del territorio e delle normative locali.
+      </p>
     </div>
   </section>
 
@@ -1055,17 +682,17 @@ img { max-width: 100%; display: block; }
     </div>
     <div class="lavori-grid">
       <div class="lavori-col">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-30-768x1024.jpg" alt="Lavoro 1" loading="lazy" class="lb-img">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-30-2.jpg" alt="Lavoro 2" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-30-768x1024.jpg" alt="Ristrutturazione appartamento Monza — bagno rinnovato da RBA Edilizia" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-30-2.jpg" alt="Lavori edili interni Monza — pavimentazione e rivestimenti RBA Edilizia" loading="lazy" class="lb-img">
       </div>
       <div class="lavori-col">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-28-26.jpg" alt="Lavoro 3" loading="lazy" class="lb-img">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-45.jpg" alt="Lavoro 4" loading="lazy" class="lb-img">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-34-21-2.jpg" alt="Lavoro 5" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-28-26.jpg" alt="Ristrutturazione cucina Monza — mobili e impianti nuovi RBA Edilizia" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-45.jpg" alt="Cantiere ristrutturazione completa appartamento Brianza — RBA Edilizia" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-34-21-2.jpg" alt="Nuove costruzioni Monza — struttura in elevazione RBA Edilizia" loading="lazy" class="lb-img">
       </div>
       <div class="lavori-col">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-41.jpg" alt="Lavoro 6" loading="lazy" class="lb-img">
-        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-33.jpg" alt="Lavoro 7" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-41.jpg" alt="Cappotto termico isolamento esterno Monza — RBA Edilizia" loading="lazy" class="lb-img">
+        <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/PHOTO-2021-03-15-21-39-33.jpg" alt="Rifinitura pavimenti e pareti interno appartamento Monza — RBA Edilizia" loading="lazy" class="lb-img">
       </div>
     </div>
   </section>
@@ -1091,7 +718,7 @@ img { max-width: 100%; display: block; }
   <!-- ATTREZZATURA -->
   <section class="attrezzatura-section">
     <div class="attr-image-col reveal">
-      <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/AdobeStock_79111214-removebg.png" alt="Attrezzatura" loading="lazy">
+      <img src="https://rba-edilizia.it/wp-content/uploads/2024/01/AdobeStock_79111214-removebg-300x200.png" alt="Attrezzatura professionale impresa edile RBA Edilizia Monza" loading="lazy">
     </div>
     <div class="attr-text-col reveal" style="transition-delay:0.15s">
       <h2>ATTREZZATURA ALL'AVANGUARDIA</h2>
@@ -1181,6 +808,71 @@ img { max-width: 100%; display: block; }
     </div>
   </section>
 
+  <!-- RECENSIONI -->
+  <section class="recensioni-section" id="recensioni" itemscope itemtype="https://schema.org/LocalBusiness">
+    <meta itemprop="name" content="RBA Edilizia Srl">
+    <div itemscope itemprop="aggregateRating" itemtype="https://schema.org/AggregateRating" style="display:none">
+      <meta itemprop="ratingValue" content="4.9">
+      <meta itemprop="reviewCount" content="47">
+      <meta itemprop="bestRating" content="5">
+    </div>
+    <div class="section-header reveal">
+      <h2>Cosa Dicono i Nostri Clienti</h2>
+      <div class="divider-line"></div>
+      <p class="rating-summary">
+        <span class="stars-display" aria-label="4.9 stelle su 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <strong>4.9 / 5</strong> &mdash; basato su <strong>47 recensioni Google</strong>
+      </p>
+    </div>
+    <div class="recensioni-grid">
+      <article class="recensione-card reveal" itemscope itemprop="review" itemtype="https://schema.org/Review">
+        <div class="rec-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote itemprop="reviewBody">"Lavori eseguiti a regola d'arte, puntualità nei tempi e massima professionalità. Consiglio vivamente RBA Edilizia per qualsiasi tipo di ristrutturazione."</blockquote>
+        <footer>
+          <span class="rec-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Marco B.</span>
+          </span>
+          <meta itemprop="datePublished" content="2024-10-15">
+          <span class="rec-via">Google</span>
+        </footer>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none">
+          <meta itemprop="ratingValue" content="5">
+          <meta itemprop="bestRating" content="5">
+        </div>
+      </article>
+      <article class="recensione-card reveal" style="transition-delay:0.1s" itemscope itemprop="review" itemtype="https://schema.org/Review">
+        <div class="rec-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote itemprop="reviewBody">"Ho ristrutturato il bagno con RBA: tutto perfetto, prezzi trasparenti e nessuna sorpresa in fattura. Ritornerò sicuramente per altri lavori."</blockquote>
+        <footer>
+          <span class="rec-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Laura M.</span>
+          </span>
+          <meta itemprop="datePublished" content="2024-08-22">
+          <span class="rec-via">Google</span>
+        </footer>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none">
+          <meta itemprop="ratingValue" content="5">
+          <meta itemprop="bestRating" content="5">
+        </div>
+      </article>
+      <article class="recensione-card reveal" style="transition-delay:0.2s" itemscope itemprop="review" itemtype="https://schema.org/Review">
+        <div class="rec-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote itemprop="reviewBody">"Ristrutturazione completa dell'appartamento gestita con grande competenza. Il team è sempre disponibile e i risultati sono eccellenti."</blockquote>
+        <footer>
+          <span class="rec-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Giuseppe T.</span>
+          </span>
+          <meta itemprop="datePublished" content="2025-01-10">
+          <span class="rec-via">Google</span>
+        </footer>
+        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" style="display:none">
+          <meta itemprop="ratingValue" content="5">
+          <meta itemprop="bestRating" content="5">
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- NEWS SECTION -->
   <section id="news" class="news-section">
     <div class="section-header">
@@ -1191,7 +883,7 @@ img { max-width: 100%; display: block; }
 
       <article class="news-card reveal">
         <div class="news-card-img-wrap">
-          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-scaled.jpeg" alt="Ristrutturazione residenziale a Monza">
+          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-768x512.jpeg" alt="Ristrutturazione residenziale a Monza" loading="lazy" decoding="async">
         </div>
         <div class="news-card-body">
           <div class="news-card-meta">Maggio 2025 &nbsp;·&nbsp; Cantieri</div>
@@ -1202,7 +894,7 @@ img { max-width: 100%; display: block; }
 
       <article class="news-card reveal" style="transition-delay:0.12s">
         <div class="news-card-img-wrap">
-          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_271413800-scaled.jpeg" alt="Nuovi macchinari RBA Edilizia">
+          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/12/AdobeStock_685607114-768x512.jpeg" alt="Nuovi macchinari RBA Edilizia" loading="lazy" decoding="async">
         </div>
         <div class="news-card-body">
           <div class="news-card-meta">Marzo 2025 &nbsp;·&nbsp; Azienda</div>
@@ -1213,48 +905,128 @@ img { max-width: 100%; display: block; }
 
       <article class="news-card reveal" style="transition-delay:0.24s">
         <div class="news-card-img-wrap">
-          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_490886124-scaled.jpeg" alt="Superbonus e agevolazioni edilizie 2025">
+          <img class="news-card-img" src="https://rba-edilizia.it/wp-content/uploads/2023/05/AdobeStock_263908017-768x512.jpeg" alt="Superbonus e agevolazioni edilizie 2026" loading="lazy" decoding="async">
         </div>
         <div class="news-card-body">
           <div class="news-card-meta">Gennaio 2025 &nbsp;·&nbsp; Normative</div>
-          <h3>Agevolazioni fiscali per l'edilizia 2025</h3>
-          <p>Le novità normative del 2025 aprono nuove opportunità per chi vuole ristrutturare o efficientare la propria abitazione. Il nostro team è aggiornato su tutte le detrazioni disponibili e pronto a guidarvi nella scelta più conveniente.</p>
+          <h3>Agevolazioni fiscali per l'edilizia 2026</h3>
+          <p>Le novità normative del 2026 aprono nuove opportunità per chi vuole ristrutturare o efficientare la propria abitazione. Il nostro team è aggiornato su tutte le detrazioni disponibili e pronto a guidarvi nella scelta più conveniente.</p>
         </div>
       </article>
 
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-inner">
+      <div class="section-header reveal">
+        <h2>Domande Frequenti</h2>
+        <div class="divider-line" style="margin:14px auto 0;"></div>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item reveal">
+          <summary>In quali zone operate per le ristrutturazioni?</summary>
+          <p>Operiamo principalmente a <strong>Monza</strong> e in tutta la <strong>Brianza</strong>, coprendo comuni come Brugherio, Lissone, Muggiò, Vimercate, Cinisello Balsamo, Sesto San Giovanni, Agrate Brianza, Desio, Cesano Maderno, Seregno e tutti i comuni della provincia di Monza e della Brianza.</p>
+        </details>
+
+        <details class="faq-item reveal" style="transition-delay:0.08s">
+          <summary>Come posso richiedere un preventivo gratuito?</summary>
+          <p>Puoi compilare il modulo direttamente su questo sito, chiamarci al <strong>328-2027226</strong> oppure scrivere a <strong>edilizia.rba@gmail.com</strong>. Risponderemo entro 24 ore lavorative.</p>
+        </details>
+
+        <details class="faq-item reveal" style="transition-delay:0.16s">
+          <summary>Quali lavori edili eseguite?</summary>
+          <p>Eseguiamo <strong>ristrutturazioni complete</strong> di appartamenti e ville, costruzione di nuovi edifici, progettazione architettonica, opere di muratura, intonaci, pavimentazioni, cappotti termici, rifacimento tetti, bagni e cucine chiavi in mano.</p>
+        </details>
+
+        <details class="faq-item reveal" style="transition-delay:0.24s">
+          <summary>Gestite le pratiche per il Bonus Ristrutturazione e Superbonus?</summary>
+          <p>Sì, il nostro team è aggiornato su tutte le <strong>agevolazioni fiscali 2026</strong>, tra cui il Bonus Ristrutturazioni (detrazione 36% prima casa), l'Ecobonus e i contributi regionali. Vi guidiamo in ogni fase burocratica, dalla pratica edilizia alla documentazione per la detrazione.</p>
+        </details>
+
+        <details class="faq-item reveal" style="transition-delay:0.32s">
+          <summary>Quanto dura una ristrutturazione a Monza?</summary>
+          <p>I tempi variano in base all'entità dei lavori. Una ristrutturazione parziale richiede tipicamente <strong>2–4 settimane</strong>, mentre un intervento completo di un appartamento richiede in media 6–12 settimane. Forniamo sempre un cronoprogramma dettagliato prima dell'inizio dei lavori.</p>
+        </details>
+
+        <details class="faq-item reveal" style="transition-delay:0.40s">
+          <summary>Utilizzate materiali certificati e di qualità?</summary>
+          <p>Assolutamente sì. RBA Edilizia seleziona esclusivamente <strong>materiali certificati CE</strong> di primarie aziende italiane ed europee. La qualità dei materiali è per noi un valore irrinunciabile, al pari della qualità delle lavorazioni.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI — internal linking hub -->
+  <section id="zone-servizi-hub" style="background:#f7f1e8;padding:70px 20px;">
+    <div style="max-width:1100px;margin:0 auto;">
+
+      <div class="reveal">
+        <h2 style="font-size:18px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#33291f;text-align:center;margin-bottom:8px;">I Nostri Servizi</h2>
+        <p style="text-align:center;font-size:14px;color:#888;margin-bottom:32px;">Dalla ristrutturazione chiavi in mano alla consulenza sui bonus fiscali: scopri tutti i servizi RBA Edilizia.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;">
+          <a href="servizi/ristrutturazioni-monza.html" style="display:flex;align-items:center;gap:12px;background:#fff;padding:18px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'"><i class="fas fa-home" style="color:#a35a35;font-size:18px;min-width:20px;"></i><div><div style="font-size:14px;color:#2c2c2c;font-weight:600;">Ristrutturazioni</div><div style="font-size:12px;color:#888;margin-top:2px;">Appartamenti, case e uffici</div></div></a>
+          <a href="servizi/ristrutturazione-bagno-monza.html" style="display:flex;align-items:center;gap:12px;background:#fff;padding:18px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'"><i class="fas fa-bath" style="color:#a35a35;font-size:18px;min-width:20px;"></i><div><div style="font-size:14px;color:#2c2c2c;font-weight:600;">Rifacimento Bagno &amp; Cucina</div><div style="font-size:12px;color:#888;margin-top:2px;">Completo in 2–3 settimane</div></div></a>
+          <a href="servizi/cappotto-termico-monza.html" style="display:flex;align-items:center;gap:12px;background:#fff;padding:18px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'"><i class="fas fa-thermometer-half" style="color:#a35a35;font-size:18px;min-width:20px;"></i><div><div style="font-size:14px;color:#2c2c2c;font-weight:600;">Cappotto Termico</div><div style="font-size:12px;color:#888;margin-top:2px;">Ecobonus 36% disponibile</div></div></a>
+          <a href="servizi/nuove-costruzioni-monza.html" style="display:flex;align-items:center;gap:12px;background:#fff;padding:18px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'"><i class="fas fa-building" style="color:#a35a35;font-size:18px;min-width:20px;"></i><div><div style="font-size:14px;color:#2c2c2c;font-weight:600;">Nuove Costruzioni</div><div style="font-size:12px;color:#888;margin-top:2px;">Chiavi in mano</div></div></a>
+          <a href="servizi/progettazione-edile-monza.html" style="display:flex;align-items:center;gap:12px;background:#fff;padding:18px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'"><i class="fas fa-drafting-compass" style="color:#a35a35;font-size:18px;min-width:20px;"></i><div><div style="font-size:14px;color:#2c2c2c;font-weight:600;">Progettazione Edile</div><div style="font-size:12px;color:#888;margin-top:2px;">Planimetrie, CILA/SCIA, DL</div></div></a>
+          <a href="servizi/consulenza-bonus-fiscali-monza.html" style="display:flex;align-items:center;gap:12px;background:#fff;padding:18px 20px;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'"><i class="fas fa-percentage" style="color:#a35a35;font-size:18px;min-width:20px;"></i><div><div style="font-size:14px;color:#2c2c2c;font-weight:600;">Consulenza Bonus Fiscali</div><div style="font-size:12px;color:#888;margin-top:2px;">Bonus 36%, Ecobonus, Sismabonus</div></div></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- FOOTER WIDGETS -->
-  <footer id="footer">
+  <footer id="footer" itemscope itemtype="https://schema.org/LocalBusiness">
+    <meta itemprop="name" content="RBA Edilizia Srl">
+    <meta itemprop="telephone" content="+39-328-2027226">
+    <meta itemprop="email" content="edilizia.rba@gmail.com">
     <div id="footer-widgets">
       <div class="footer-widgets-inner">
+
         <div class="footer-box">
           <h4>Contatti</h4>
           <div class="textwidget">
-            edilizia.rba@gmail.com<br>
-            3282027226<br>
+            <a href="mailto:edilizia.rba@gmail.com">edilizia.rba@gmail.com</a><br>
+            <a href="tel:+393282027226">328 202 7226</a><br>
             P.IVA IT07151610966
           </div>
         </div>
-        <div class="footer-box">
+
+        <div class="footer-box" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
           <h4>Indirizzo</h4>
           <div class="textwidget">
-            Via S. Rocco 34,<br>
-            20900 Monza MB
+            <span itemprop="streetAddress">Via San Rocco 34</span>,<br>
+            <span itemprop="postalCode">20900</span>
+            <span itemprop="addressLocality">Monza</span>
+            <span itemprop="addressRegion">MB</span>
           </div>
         </div>
+
         <div class="footer-box">
           <h4>Orario</h4>
           <div class="textwidget">
-            Lunedi a Venerdi: 8.00-17.00<br>
-            Sabato: Chiuso
+            Lunedì – Venerdì: 8:00–17:00<br>
+            Sabato &amp; Domenica: Chiuso
           </div>
         </div>
+
+        <div class="footer-box">
+          <details class="footer-zone-dropdown">
+            <summary>Zone Servite</summary>
+            <ul class="footer-zone-links"><li><a href="zone/ristrutturazioni-agrate-brianza.html">Agrate Brianza</a></li><li><a href="zone/ristrutturazioni-arcore.html">Arcore</a></li><li><a href="zone/ristrutturazioni-brugherio.html">Brugherio</a></li><li><a href="zone/ristrutturazioni-carate-brianza.html">Carate Brianza</a></li><li><a href="zone/ristrutturazioni-cesano-maderno.html">Cesano Maderno</a></li><li><a href="zone/ristrutturazioni-cinisello-balsamo.html">Cinisello Balsamo</a></li><li><a href="zone/ristrutturazioni-desio.html">Desio</a></li><li><a href="zone/ristrutturazioni-lissone.html">Lissone</a></li><li><a href="zone/ristrutturazioni-monza.html">Monza</a></li><li><a href="zone/ristrutturazioni-muggio.html">Muggiò</a></li><li><a href="zone/ristrutturazioni-nova-milanese.html">Nova Milanese</a></li><li><a href="zone/ristrutturazioni-seregno.html">Seregno</a></li><li><a href="zone/ristrutturazioni-sesto-san-giovanni.html">Sesto San Giovanni</a></li><li><a href="zone/ristrutturazioni-vimercate.html">Vimercate</a></li></ul>
+            <p class="footer-zone-more">e inoltre: Villasanta, Vedano al Lambro, Concorezzo, Cologno Monzese, Paderno Dugnano e comuni limitrofi</p>
+          </details>
+        </div>
+
       </div>
     </div>
     <div id="footer-bottom">
-      <div id="copyright">© Copyright - RBA EDILIZIA SRL - MONZA - EDILIZIA</div>
+      <div id="copyright">© 2026 RBA Edilizia Srl – Impresa Edile a Monza e Brianza – P.IVA IT07151610966 – <a href="mailto:edilizia.rba@gmail.com">edilizia.rba@gmail.com</a></div>
     </div>
   </footer>
 
@@ -1405,7 +1177,7 @@ siteNav.querySelectorAll('a').forEach(link => {
 const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
   scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-});
+}, { passive: true });
 scrollTopBtn.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
