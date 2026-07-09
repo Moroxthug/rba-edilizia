@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rba-edilizia.it/sitemap.xml
+Sitemap: https://www.rba-edilizia.it/sitemap.xml
