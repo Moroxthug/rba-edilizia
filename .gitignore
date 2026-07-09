@@ -1,2 +1,4 @@
 .claude/
 .local/
+scripts/secrets/
+node_modules/
