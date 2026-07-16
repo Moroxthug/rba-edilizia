@@ -1112,3 +1112,19 @@ img { max-width: 100%; display: block; }
   bottom: 95px !important;
 }
 
+
+/* ===== HEADER: niente a-capo nel menu desktop ===== */
+@media (min-width: 901px) {
+  #site-navigation > ul > li > a { white-space: nowrap; }
+}
+
+/* ===== HEADER COMPATTO 901-1360px: il menu esteso non entra con gli stili standard ===== */
+@media (min-width: 901px) and (max-width: 1360px) {
+  #site-header { padding: 0 12px; }
+  #site-logo img { height: 48px; }
+  #header-right { gap: 12px; }
+  #site-navigation ul { gap: 0; }
+  #site-navigation > ul > li > a { padding: 10px 5px; font-size: 10px; letter-spacing: 0.5px; }
+  .header-phone { font-size: 12px; }
+  .header-phone i { font-size: 11px; }
+}
