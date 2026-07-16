@@ -1128,3 +1128,10 @@ img { max-width: 100%; display: block; }
   .header-phone { font-size: 12px; }
   .header-phone i { font-size: 11px; }
 }
+
+/* ===== HEADER: menu distribuito uniformemente tra logo e telefono ===== */
+@media (min-width: 901px) {
+  #header-right { flex: 1 1 auto; min-width: 0; margin-left: clamp(16px, 3vw, 48px); }
+  #site-navigation { flex: 1 1 auto; }
+  #site-navigation > ul { justify-content: space-evenly; }
+}
