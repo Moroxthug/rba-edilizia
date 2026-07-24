@@ -7,8 +7,8 @@ Priorità massima: questi comuni sono già elencati come serviti, quindi crearne
 
 - [x] Bresso (MI) — pubblicato 2026-07-20 (commit a348c36)
 - [x] Cusano Milanino (MI) — pubblicato 2026-07-20 (commit a348c36)
-- [ ] Limbiate (MB)
-- [ ] Bovisio Masciago (MB)
+- [x] Limbiate (MB) — pubblicato 2026-07-24 (commit PENDING)
+- [x] Bovisio Masciago (MB) — pubblicato 2026-07-24 (commit PENDING)
 - [ ] Lesmo (MB)
 - [ ] Usmate Velate (MB)
 - [ ] Bernareggio (MB)
