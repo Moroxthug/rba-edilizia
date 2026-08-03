@@ -11,8 +11,8 @@ Priorità massima: questi comuni sono già elencati come serviti, quindi crearne
 - [x] Bovisio Masciago (MB) — pubblicato 2026-07-24 (commit d2cc4b0)
 - [x] Lesmo (MB) — pubblicato 2026-07-27 (commit 736304c)
 - [x] Usmate Velate (MB) — pubblicato 2026-07-27 (commit 736304c)
-- [x] Bernareggio (MB) — pubblicato 2026-08-04 (commit PENDING)
-- [x] Cormano (MI) — pubblicato 2026-08-04 (commit PENDING)
+- [x] Bernareggio (MB) — pubblicato 2026-08-04 (commit 2dd30c9)
+- [x] Cormano (MI) — pubblicato 2026-08-04 (commit 2dd30c9)
 - [ ] Meda (MB)
 
 ## Fase 2 — Articoli combo servizio+comune (alto intento d'acquisto, comuni già forti)
