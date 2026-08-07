@@ -284,12 +284,38 @@ document.addEventListener('click',(e)=>{if(!siteNav.contains(e.target)&&!mobileT
 const scrollTopBtn=document.getElementById('scroll-top');
 window.addEventListener('scroll',()=>scrollTopBtn.classList.toggle('visible',window.scrollY>400),{passive:true});
 scrollTopBtn.addEventListener('click',(e)=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
-document.getElementById('prevPageForm').addEventListener('submit',function(e){
+document.getElementById('prevPageForm').addEventListener('submit',async function(e){
   e.preventDefault();
   const fields=['pp-nome','pp-cognome','pp-telefono','pp-email','pp-tipo','pp-comune'];
   if(!fields.every(id=>document.getElementById(id).value.trim())){alert('Compila tutti i campi obbligatori.');return;}
-  this.style.display='none';
-  document.getElementById('ppSuccess').style.display='block';
+  const form=this;
+  const submitBtn=form.querySelector('button[type="submit"]');
+  const originalText=submitBtn.textContent;
+  submitBtn.disabled=true;
+  submitBtn.textContent='Invio in corso...';
+  try{
+    const res=await fetch('/api/send-form',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        formType:'preventivo',
+        nome:document.getElementById('pp-nome').value.trim(),
+        cognome:document.getElementById('pp-cognome').value.trim(),
+        telefono:document.getElementById('pp-telefono').value.trim(),
+        email:document.getElementById('pp-email').value.trim(),
+        tipo:document.getElementById('pp-tipo').value,
+        comune:document.getElementById('pp-comune').value.trim(),
+        messaggio:document.getElementById('pp-messaggio').value.trim(),
+      }),
+    });
+    if(!res.ok) throw new Error('invio fallito');
+    form.style.display='none';
+    document.getElementById('ppSuccess').style.display='block';
+  }catch(err){
+    alert('Si è verificato un errore nell\'invio. Riprova o contattaci telefonicamente.');
+    submitBtn.disabled=false;
+    submitBtn.textContent=originalText;
+  }
 });
 const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));

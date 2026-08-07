@@ -282,7 +282,7 @@
 const contattiForm = document.getElementById('contattiForm');
 const contattiSuccess = document.getElementById('contatti-success');
 
-contattiForm.addEventListener('submit', (e) => {
+contattiForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const fields = ['nome','cognome','telefono','email','tipo'];
   const allFilled = fields.every(f => document.getElementById('c-' + f).value.trim() !== '');
@@ -290,8 +290,31 @@ contattiForm.addEventListener('submit', (e) => {
     alert('Per favore compila tutti i campi obbligatori.');
     return;
   }
-  contattiForm.style.display = 'none';
-  contattiSuccess.style.display = 'block';
+  const submitBtn = contattiForm.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Invio in corso...';
+  try {
+    const res = await fetch('/api/send-form', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        formType: 'contatti',
+        nome: document.getElementById('c-nome').value.trim(),
+        cognome: document.getElementById('c-cognome').value.trim(),
+        telefono: document.getElementById('c-telefono').value.trim(),
+        email: document.getElementById('c-email').value.trim(),
+        tipo: document.getElementById('c-tipo').value,
+        messaggio: document.getElementById('c-messaggio').value.trim(),
+      }),
+    });
+    if (!res.ok) throw new Error('invio fallito');
+    contattiForm.style.display = 'none';
+    contattiSuccess.style.display = 'block';
+  } catch (err) {
+    alert('Si è verificato un errore nell\'invio. Riprova o contattaci telefonicamente.');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Invia richiesta';
+  }
 });
 
 const mobileToggle = document.getElementById('mobileToggle'), siteNav = document.getElementById('site-navigation');
