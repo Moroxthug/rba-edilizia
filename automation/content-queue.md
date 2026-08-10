@@ -13,12 +13,12 @@ Priorità massima: questi comuni sono già elencati come serviti, quindi crearne
 - [x] Usmate Velate (MB) — pubblicato 2026-07-27 (commit 736304c)
 - [x] Bernareggio (MB) — pubblicato 2026-08-04 (commit 2dd30c9)
 - [x] Cormano (MI) — pubblicato 2026-08-04 (commit 2dd30c9)
-- [x] Meda (MB) — pubblicato 2026-08-11 (commit PLACEHOLDER)
+- [x] Meda (MB) — pubblicato 2026-08-11 (commit 871d1bc)
 
 ## Fase 2 — Articoli combo servizio+comune (alto intento d'acquisto, comuni già forti)
 Da avviare dopo la Fase 1. Formato: clonare template da news/cappotto-termico-materiali-confronto.html.
 
-- [x] Rifacimento bagno a Villasanta — pubblicato 2026-08-11 (commit PLACEHOLDER)
+- [x] Rifacimento bagno a Villasanta — pubblicato 2026-08-11 (commit 871d1bc)
 - [ ] Cappotto termico ad Arcore
 - [ ] Ristrutturazione cucina a Brugherio
 - [ ] Rifacimento bagno ad Arcore
