@@ -19,8 +19,8 @@ Priorità massima: questi comuni sono già elencati come serviti, quindi crearne
 Da avviare dopo la Fase 1. Formato: clonare template da news/cappotto-termico-materiali-confronto.html.
 
 - [x] Rifacimento bagno a Villasanta — pubblicato 2026-08-11 (commit 871d1bc)
-- [ ] Cappotto termico ad Arcore
-- [ ] Ristrutturazione cucina a Brugherio
+- [x] Cappotto termico ad Arcore — pubblicato 2026-08-17 (commit PENDING)
+- [x] Ristrutturazione cucina a Brugherio — pubblicato 2026-08-17 (commit PENDING)
 - [ ] Rifacimento bagno ad Arcore
 - [ ] Cappotto termico a Brugherio
 - [ ] Ristrutturazione cucina ad Agrate Brianza
