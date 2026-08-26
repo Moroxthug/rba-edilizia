@@ -21,17 +21,31 @@ Da avviare dopo la Fase 1. Formato: clonare template da news/cappotto-termico-ma
 - [x] Rifacimento bagno a Villasanta — pubblicato 2026-08-11 (commit 871d1bc)
 - [x] Cappotto termico ad Arcore — pubblicato 2026-08-17 (commit b8f970f)
 - [x] Ristrutturazione cucina a Brugherio — pubblicato 2026-08-17 (commit b8f970f)
-- [ ] Rifacimento bagno ad Arcore
-- [ ] Cappotto termico a Brugherio
+- [x] Rifacimento bagno ad Arcore — pubblicato 2026-08-26 (commit PENDING)
+- [x] Cappotto termico a Brugherio — pubblicato 2026-08-26 (commit PENDING)
 - [ ] Ristrutturazione cucina ad Agrate Brianza
 - [ ] Rifacimento bagno a Concorezzo
 - [ ] Cappotto termico a Villasanta
 
-## Fase 3 — Nuovi comuni non ancora promessi (vera espansione, valutare dopo Fase 1-2)
-Candidati entro 15km da Monza, non ancora citati sul sito: Biassono, Macherio, Sovico, Albiate, Triuggio,
-Giussano, Barlassina, Lentate sul Seveso, Novate Milanese, Bollate, Baranzate, Senago, Garbagnate Milanese.
-Richiedono prima un OK esplicito dell'utente prima di aggiungerli a zone.html/JSON-LD (ampliano una promessa
-di copertura territoriale, non solo un allineamento).
+## Fase 3 — Nuovi comuni non ancora promessi (vera espansione)
+Candidati entro 15km da Monza, non ancora citati sul sito. **Approvata dall'utente (Youssef) il 2026-08-17**:
+via libera esplicito a trattarli come normale prosecuzione della coda, stesso trattamento di Fase 1 (nuova
+pagina zona + JSON-LD LocalBusiness + aggiornamento cross-link sitewide), stessa cadenza di 2 pagine/settimana.
+Da avviare dopo l'esaurimento di Fase 1 e Fase 2.
+
+- [ ] Biassono (MB)
+- [ ] Macherio (MB)
+- [ ] Sovico (MB)
+- [ ] Albiate (MB)
+- [ ] Triuggio (MB)
+- [ ] Giussano (MB)
+- [ ] Barlassina (MB)
+- [ ] Lentate sul Seveso (MB)
+- [ ] Novate Milanese (MI)
+- [ ] Bollate (MI)
+- [ ] Baranzate (MI)
+- [ ] Senago (MI)
+- [ ] Garbagnate Milanese (MI)
 
 ## Regole per chi esegue un batch
 1. Prendere le prime 2 voci non spuntate (fasi in ordine, Fase 1 prima di Fase 2 prima di Fase 3).
