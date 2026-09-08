@@ -462,4 +462,66 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- PAGINE PUBBLICATE MA MANCANTI DALLA SITEMAP (aggiunte 2026-09-08) -->
+  <url>
+    <loc>https://www.rba-edilizia.it/news/costo-ristrutturazione-comuni-brianza.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/cappotto-termico-arcore.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/ristrutturazione-cucina-brugherio.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/rifacimento-bagno-arcore.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/cappotto-termico-brugherio.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/ristrutturazione-cucina-agrate-brianza.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/rifacimento-bagno-concorezzo.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/news/cappotto-termico-villasanta.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/zone/ristrutturazioni-biassono.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.rba-edilizia.it/zone/ristrutturazioni-macherio.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
