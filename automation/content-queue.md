@@ -23,8 +23,8 @@ Da avviare dopo la Fase 1. Formato: clonare template da news/cappotto-termico-ma
 - [x] Ristrutturazione cucina a Brugherio — pubblicato 2026-08-17 (commit b8f970f)
 - [x] Rifacimento bagno ad Arcore — pubblicato 2026-08-26 (commit 582e34b)
 - [x] Cappotto termico a Brugherio — pubblicato 2026-08-26 (commit 582e34b)
-- [ ] Ristrutturazione cucina ad Agrate Brianza
-- [ ] Rifacimento bagno a Concorezzo
+- [x] Ristrutturazione cucina ad Agrate Brianza — pubblicato 2026-08-31 (commit PENDING)
+- [x] Rifacimento bagno a Concorezzo — pubblicato 2026-08-31 (commit PENDING)
 - [ ] Cappotto termico a Villasanta
 
 ## Fase 3 — Nuovi comuni non ancora promessi (vera espansione)
