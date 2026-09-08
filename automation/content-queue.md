@@ -25,7 +25,7 @@ Da avviare dopo la Fase 1. Formato: clonare template da news/cappotto-termico-ma
 - [x] Cappotto termico a Brugherio — pubblicato 2026-08-26 (commit 582e34b)
 - [x] Ristrutturazione cucina ad Agrate Brianza — pubblicato 2026-08-31 (commit e3b2b3e)
 - [x] Rifacimento bagno a Concorezzo — pubblicato 2026-08-31 (commit e3b2b3e)
-- [ ] Cappotto termico a Villasanta
+- [x] Cappotto termico a Villasanta — pubblicato 2026-09-08 (commit PENDING)
 
 ## Fase 3 — Nuovi comuni non ancora promessi (vera espansione)
 Candidati entro 15km da Monza, non ancora citati sul sito. **Approvata dall'utente (Youssef) il 2026-08-17**:
@@ -33,7 +33,7 @@ via libera esplicito a trattarli come normale prosecuzione della coda, stesso tr
 pagina zona + JSON-LD LocalBusiness + aggiornamento cross-link sitewide), stessa cadenza di 2 pagine/settimana.
 Da avviare dopo l'esaurimento di Fase 1 e Fase 2.
 
-- [ ] Biassono (MB)
+- [x] Biassono (MB) — pubblicato 2026-09-08 (commit PENDING)
 - [ ] Macherio (MB)
 - [ ] Sovico (MB)
 - [ ] Albiate (MB)
