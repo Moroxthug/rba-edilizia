@@ -34,7 +34,7 @@ pagina zona + JSON-LD LocalBusiness + aggiornamento cross-link sitewide), stessa
 Da avviare dopo l'esaurimento di Fase 1 e Fase 2.
 
 - [x] Biassono (MB) — pubblicato 2026-09-08 (commit 8501b06)
-- [ ] Macherio (MB)
+- [x] Macherio (MB) — pubblicato 2026-09-08 (commit 1481ab8)
 - [ ] Sovico (MB)
 - [ ] Albiate (MB)
 - [ ] Triuggio (MB)
