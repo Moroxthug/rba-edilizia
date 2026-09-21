@@ -35,8 +35,8 @@ Da avviare dopo l'esaurimento di Fase 1 e Fase 2.
 
 - [x] Biassono (MB) — pubblicato 2026-09-08 (commit 8501b06)
 - [x] Macherio (MB) — pubblicato 2026-09-08 (commit 1481ab8)
-- [x] Sovico (MB) — pubblicato 2026-09-21 (commit PENDING)
-- [x] Albiate (MB) — pubblicato 2026-09-21 (commit PENDING)
+- [x] Sovico (MB) — pubblicato 2026-09-21 (commit f40bcf6)
+- [x] Albiate (MB) — pubblicato 2026-09-21 (commit f40bcf6)
 - [ ] Triuggio (MB)
 - [ ] Giussano (MB)
 - [ ] Barlassina (MB)
