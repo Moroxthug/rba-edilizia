@@ -59,3 +59,9 @@ Da avviare dopo l'esaurimento di Fase 1 e Fase 2.
 5. Commit + push su origin (repo collegato a deploy live — vedi memoria feedback utente: push automatico
    confermato esplicitamente il 2026-07-20 per questa routine specifica).
 6. Spuntare la voce in questo file con data e commit hash, poi commit+push anche di questo file.
+
+## Nota 2026-10-11 — stop pagine zona, priorità articoli
+GSC segnala problemi di indicizzazione. Le pagine zona sono sottili (250-400 parole) e fino al ~58% simili tra
+loro: rischio "Scansionata, attualmente non indicizzata". **Sospendere le nuove pagine zona (Baranzate, Senago,
+Garbagnate)** finché le esistenti non sono indicizzate/arricchite; pubblicare invece articoli tecnici unici.
+- [x] Articoli tecnici 2026-10-11: recupero sottotetto Lombardia, rifacimento tetto, rifacimento impianto idraulico

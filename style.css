@@ -173,7 +173,7 @@ img { max-width: 100%; display: block; }
 .page-banner .banner-inner {
   position: relative; z-index: 1;
 }
-.page-banner h1 {
+.page-banner h1, .page-banner .banner-h1 {
   font-family: 'Fraunces', serif;
   font-size: clamp(32px, 5vw, 60px);
   font-weight: 700;
@@ -727,7 +727,7 @@ img { max-width: 100%; display: block; }
 #scroll-top:hover { transform: translateY(-4px); background: #33291f; }
 
 /* ===== PAGE BANNER PARALLAX POLISH ===== */
-.page-banner h1 { animation: bannerSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+.page-banner h1, .page-banner .banner-h1 { animation: bannerSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) both; }
 .page-banner .banner-sub { animation: bannerSlideUp 0.9s 0.15s cubic-bezier(0.22,1,0.36,1) both; }
 .page-banner .breadcrumb { animation: bannerSlideUp 0.9s 0.28s cubic-bezier(0.22,1,0.36,1) both; }
 
@@ -918,7 +918,7 @@ img { max-width: 100%; display: block; }
   .page-banner { padding: 90px 20px 70px; background-attachment: scroll; }
   /* Long single words (e.g. "RISTRUTTURAZIONI") at the desktop clamp/letter-spacing
      don't fit narrow screens and force horizontal overflow on the whole page */
-  .page-banner h1 { font-size: 28px; letter-spacing: 5px; }
+  .page-banner h1, .page-banner .banner-h1 { font-size: 28px; letter-spacing: 5px; }
   /* Font-size >=16px on form fields: prevents iOS Safari from auto-zooming on focus */
   .prev-field input, .prev-field select, .prev-field textarea,
   .inline-prev-field input, .inline-prev-field select, .inline-prev-field textarea {
@@ -1135,3 +1135,5 @@ img { max-width: 100%; display: block; }
   #site-navigation { flex: 1 1 auto; }
   #site-navigation > ul { justify-content: space-evenly; }
 }
+
+.page-banner .banner-h1 { margin: 0.67em 0; }
