@@ -71,4 +71,5 @@ Su richiesta dell'utente: solo articoli (nessuna nuova pagina zona, lo stop del 
 Ordine comuni: Segrate, San Donato Milanese, Peschiera Borromeo, poi Vimodrone, Cassina de' Pecchi, Carugate, Pioltello, Arese, Lainate; per ultimi Basiglio, Assago, Buccinasco (>35 km da Monza, da validare).
 Più articoli hub provincia (costi per comune, condominio a Milano, ville anni '70, Parco Sud).
 - [x] Batch 1 (2026-11-03): Segrate x2, San Donato Milanese x2, Peschiera Borromeo x2
-- [ ] Batch 2: Vimodrone, Cassina de' Pecchi, Carugate
+- [x] Batch 2 (2026-11-03): Vimodrone x2, Cassina de' Pecchi x2, Carugate x2
+- [ ] Batch 3: Pioltello, Arese, Lainate
