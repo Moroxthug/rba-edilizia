@@ -74,4 +74,5 @@ Più articoli hub provincia (costi per comune, condominio a Milano, ville anni '
 - [x] Batch 2 (2026-11-03): Vimodrone x2, Cassina de' Pecchi x2, Carugate x2
 - [x] Batch 3 (2026-11-03): Pioltello x2, Arese x2, Lainate x2
 - [x] Batch 4 (2026-11-03): articoli hub provincia (costi per comune, condominio, villa anni 70, Parco Sud)
-- [ ] Prossimo: Assago/Buccinasco/Basiglio (da validare per distanza), poi nuove idee per comune
+- [x] Batch 5 (2026-11-03): Assago x2, Basiglio x2, Buccinasco x2 (sud-ovest MI, >35 km da Monza)
+- [ ] Prossimo: attendere dati GSC sui batch 1-5; idee: Rho, Pero, Settimo Milanese, Gorgonzola, Bussero
