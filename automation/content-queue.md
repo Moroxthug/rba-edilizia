@@ -73,4 +73,5 @@ Più articoli hub provincia (costi per comune, condominio a Milano, ville anni '
 - [x] Batch 1 (2026-11-03): Segrate x2, San Donato Milanese x2, Peschiera Borromeo x2
 - [x] Batch 2 (2026-11-03): Vimodrone x2, Cassina de' Pecchi x2, Carugate x2
 - [x] Batch 3 (2026-11-03): Pioltello x2, Arese x2, Lainate x2
-- [ ] Batch 4: articoli hub provincia (costi per comune, condominio a Milano, ville anni 70, Parco Sud); poi Assago/Buccinasco/Basiglio (da validare per distanza)
+- [x] Batch 4 (2026-11-03): articoli hub provincia (costi per comune, condominio, villa anni 70, Parco Sud)
+- [ ] Prossimo: Assago/Buccinasco/Basiglio (da validare per distanza), poi nuove idee per comune
