@@ -65,3 +65,10 @@ GSC segnala problemi di indicizzazione. Le pagine zona sono sottili (250-400 par
 loro: rischio "Scansionata, attualmente non indicizzata". **Sospendere le nuove pagine zona (Baranzate, Senago,
 Garbagnate)** finché le esistenti non sono indicizzate/arricchite; pubblicare invece articoli tecnici unici.
 - [x] Articoli tecnici 2026-10-11: recupero sottotetto Lombardia, rifacimento tetto, rifacimento impianto idraulico
+
+## Nota 2026-11-03 — nuova direzione: articoli per comuni cari/poco serviti della provincia di Milano
+Su richiesta dell'utente: solo articoli (nessuna nuova pagina zona, lo stop del 2026-10-11 resta). Ogni articolo con angolo locale unico.
+Ordine comuni: Segrate, San Donato Milanese, Peschiera Borromeo, poi Vimodrone, Cassina de' Pecchi, Carugate, Pioltello, Arese, Lainate; per ultimi Basiglio, Assago, Buccinasco (>35 km da Monza, da validare).
+Più articoli hub provincia (costi per comune, condominio a Milano, ville anni '70, Parco Sud).
+- [x] Batch 1 (2026-11-03): Segrate x2, San Donato Milanese x2, Peschiera Borromeo x2
+- [ ] Batch 2: Vimodrone, Cassina de' Pecchi, Carugate
